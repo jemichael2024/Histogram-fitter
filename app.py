@@ -200,8 +200,8 @@ with left:
 with right:    
     # PLOT
     fig, ax = plt.subplots(figsize=(7,4))
-    ax.hist(data, bins=bins, density=True, alpha=0.4, label="Histogram")
-    ax.plot(x, pdf_y, lw=2, label=f"{dist_name} PDF")
+    ax.hist(data, bins = bins, density = True, alpha=0.4, color = "red", label="Histogram")
+    ax.plot(x, pdf_y, lw=2, color = "purple", label=f"{dist_name} PDF")
     ax.legend()
     ax.set_xlabel("Value")
     ax.set_ylabel("Density")
@@ -254,25 +254,25 @@ with right:
     # SHOW RESULTS
     side1, side2 = st.columns([3, 4])
     with side1:
-        st.subheader("Fit Quality Results")
+        st.subheader("Fit Quality Results ")
         
-        st.markdown('<span class="tip" data-tip="Average difference between your data and the fitted curve. Lower is better.">Average Error:</span>', unsafe_allow_html=True)
+        st.markdown('<span class="tip" data-tip="Average difference between your data and the fitted curve. Lower is better."> ℹ️ Average Error:</span>', unsafe_allow_html=True)
         st.write(f"{avg_error:.4f}")
         
-        st.markdown('<span class="tip" data-tip="Largest single difference between your data and the curve.">Maximum Error:</span>', unsafe_allow_html=True)
+        st.markdown('<span class="tip" data-tip="Largest single difference between your data and the curve.">ℹ️ Maximum Error:</span>', unsafe_allow_html=True)
         st.write(f"{max_error:.4f}")
         
-        st.markdown('<span class="tip" data-tip="Mean Squared Error. Shows how far predictions are from true values.">MSE (Mean Squared Error):</span>', unsafe_allow_html=True)
+        st.markdown('<span class="tip" data-tip="Mean Squared Error. Shows how far predictions are from true values.">ℹ️ MSE (Mean Squared Error):</span>', unsafe_allow_html=True)
         st.write(f"{mse:.4f}")
         
-        st.markdown('<span class="tip" data-tip="R² measures how well the model explains variance in the data. 1 = perfect fit.">R² Score:</span>', unsafe_allow_html=True)
+        st.markdown('<span class="tip" data-tip="R² measures how well the model explains variance in the data. 1 = perfect fit.">ℹ️ R² Score:</span>', unsafe_allow_html=True)
         st.write(f"{r2:.4f}")
         
         
     with side2:
-        st.markdown('<span class="tip" data-tip="Name of the best-fitting distribution.">Distribution:</span>', unsafe_allow_html=True)
+        st.markdown('<span class="tip" data-tip="Name of the best-fitting distribution.">ℹ️ Distribution:</span>', unsafe_allow_html=True)
         st.write(dist_name)
-        st.markdown('<span class="tip" data-tip="Rating based on how well the curve fits the data.">Fit Quality Rating:</span>', unsafe_allow_html=True)
+        st.markdown('<span class="tip" data-tip="Rating based on how well the curve fits the data."> ℹ️ Fit Quality Rating:</span>', unsafe_allow_html=True)
         st.write(fit_quality)
         st.write("**Parameters:**", params)
         st.write("These parameters describe the shape and position of the distribution:")
@@ -280,6 +280,7 @@ with right:
         st.write("– The second-to-last value shifts the curve left/right")
         st.write("– The last value controls how wide or spread-out the curve is")
   
+
 
 
 
