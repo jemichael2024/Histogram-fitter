@@ -42,7 +42,7 @@ html, body, [class*="css"] {
 
 # PAGE SETUP
 
-st.title("Histogram Fitter - NE111")
+st.title("Histogram Fitter")
 
 #SIDEBAR: DATA INPUT
 st.sidebar.header("DATA INPUT")
@@ -280,6 +280,7 @@ with right:
         st.write("– The second-to-last value shifts the curve left/right")
         st.write("– The last value controls how wide or spread-out the curve is")
   
+
 
 
 
